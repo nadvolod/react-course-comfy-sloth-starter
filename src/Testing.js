@@ -10,6 +10,8 @@ const Testing = () => {
     )
 }
 
+// Styled component don't add functionality
+// but only the styling
 const Wrapper = styled.section`
     h3 {
         color: red;
