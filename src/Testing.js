@@ -1,0 +1,18 @@
+import React from 'react'
+import styled from 'styled-components'
+
+//rafc react arrow function component
+const Testing = () => {
+    return (
+        <Wrapper>
+            <h3>Hello</h3>
+        </Wrapper>
+    )
+}
+
+const Wrapper = styled.section`
+    h3 {
+        color: red;
+    }
+`
+export default Testing;
