@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^8.3.1",
     "netlify-cli": "^3.10.1"
   }
 }
