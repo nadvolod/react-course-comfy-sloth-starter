@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaShoppingCart, FaUserMinus } from 'react-icons/fa'
+import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useProductsContext } from '../context/products_context'
@@ -16,7 +16,7 @@ const CartButton = () => {
         </span>
       </Link>
       <button type='button' className='auth-btn'>
-        Login <FaUserMinus />
+        Login <FaUserPlus />
       </button>
     </Container>
   )
