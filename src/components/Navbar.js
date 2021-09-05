@@ -3,13 +3,37 @@ import styled from 'styled-components'
 import logo from '../assets/logo.svg'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
-import { useUserContext } from '../context/user_context'
 
 const Nav = () => {
-  return <h4>navbar</h4>
+  //const { openSidebar } = useProductsContext()
+  return (
+    <NavContainer>
+      <div className='nav-center'>
+        <div className='nav-header'>
+          <Link to='/'>
+            <img src={logo} alt='comfy sloth' />
+          </Link>
+          <button type='button' className='nav-toggle'>
+            <FaBars />
+          </button>
+        </div>
+        <ul className='nav-links'>
+          <li>
+            <Link to='/about'>about</Link>
+          </li>
+          <li>
+            <Link to='/products'>products</Link>
+          </li>
+          <li>
+            <Link to='/checkout'>checkout</Link>
+          </li>
+        </ul>
+        <CartButtons />
+      </div>
+    </NavContainer>
+  )
 }
 
 const NavContainer = styled.nav`
@@ -17,7 +41,6 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-
   .nav-center {
     width: 90vw;
     margin: 0 auto;
@@ -28,8 +51,7 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      width: 175px;
-      margin-left: -15px;
+      width: 200px;
     }
   }
   .nav-toggle {
@@ -60,11 +82,11 @@ const NavContainer = styled.nav`
       display: flex;
       justify-content: center;
       li {
-        margin: 0 0.5rem;
+        margin: 0 1rem;
       }
       a {
-        color: var(--clr-grey-3);
-        font-size: 1rem;
+        color: var(--clr-grey-1);
+        font-size: 1.5rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
@@ -74,7 +96,7 @@ const NavContainer = styled.nav`
       }
     }
     .cart-btn-wrapper {
-      display: grid;
+      display: block;
     }
   }
 `

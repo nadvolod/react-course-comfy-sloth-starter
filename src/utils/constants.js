@@ -1,5 +1,7 @@
 import React from 'react'
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+// these are the links that will show up in the header
+// if we want more links, just add them here
 export const links = [
   {
     id: 1,

@@ -6,7 +6,7 @@ describe('app.spec.js', () => {
   })
 
   it('displays 4 items by default', () => {
-    cy.get('#root > h4').should('have.length', 4)
+    cy.get('img').should('be.visible')
   })
   it('navigates all the routes', () => {
     cy.visit('/about')
